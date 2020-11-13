@@ -36,6 +36,18 @@ export default new Router({
       name: "jiaofeichaxun",
       component: () =>import( "./components/zhihuiwuye/jiaofeichaxun.vue")
     }
+    ,
+    {
+      path: "/gonggaoguanli",
+      name: "gonggaoguanli",
+      component: () =>import( "./components/zhihuiwuye/gonggaoguanli.vue")
+    }
+    ,
+    {
+      path: "/guzhangbaoxiu",
+      name: "guzhangbaoxiu",
+      component: () =>import( "./components/zhihuiwuye/guzhangbaoxiu.vue")
+    }
   ]
 });
  

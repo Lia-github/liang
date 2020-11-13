@@ -1,6 +1,67 @@
 <template>
   <div>
-    <div class="tou"></div>
+    <div class="tou">
+      <div class="head">
+        <img src="../../public/imgs/Headlogo.png" alt />
+        <div class="sp1">
+          <span>XXXX智慧社区管理系统</span>
+        </div>
+        <div class="daohang">
+          <ul>
+            <li class="el-icon-user-solid">
+              <el-dropdown>
+                <span class="el-dropdown-link">
+                  admin
+                  <i class="el-icon-arrow-down el-icon--right"></i>
+                </span>
+                <el-dropdown-menu slot="dropdown">
+                  <el-button
+                    type="text"
+                    @click="dialogFormVisible = true"
+                  >&nbsp;&nbsp;&nbsp; &nbsp;修改密码</el-button>
+                  <el-dropdown-item>个人资料</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+
+              <!-- <el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button> -->
+              <el-dialog title="修改密码" :visible.sync="dialogFormVisible">
+                <el-form :model="form">
+                  <el-form-item label="旧密码" :label-width="formLabelWidth">
+                    <el-input v-model="form.name" autocomplete="off"></el-input>
+                  </el-form-item>
+                  <el-form-item label="新密码" :label-width="formLabelWidth">
+                    <el-input v-model="form.name" autocomplete="off"></el-input>
+                  </el-form-item>
+                  <el-form-item label="确定密码" :label-width="formLabelWidth">
+                    <el-input v-model="form.name" autocomplete="off"></el-input>
+                  </el-form-item>
+                </el-form>
+                <div slot="footer" class="dialog-footer">
+                  <el-button @click="dialogFormVisible = false">取 消</el-button>
+                  <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+                </div>
+              </el-dialog>
+            </li>
+            <li class="el-icon-s-open">
+              <span class="sp2">换肤</span>
+            </li>
+            <li class="el-icon-question">
+              <el-dropdown>
+                <span class="el-dropdown-link">
+                  帮助
+                  <i class="el-icon-arrow-down el-icon--right"></i>
+                </span>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item>帮助文档</el-dropdown-item>
+                  <el-dropdown-item>关于系统</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+            </li>
+            <li class="el-icon-switch-button"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div>
       <el-container style="height: 900px; border: 1px solid #eee">
         <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
@@ -16,13 +77,11 @@
               </template>
               <el-menu-item-group>
                 <template slot="title"></template>
-                <el-menu-item index="2-1">物业缴费
-
-                </el-menu-item>
+                <el-menu-item index="2-1">物业缴费</el-menu-item>
                 <el-menu-item index="2-2">缴费查询</el-menu-item>
               </el-menu-item-group>
-                <el-menu-item index="2-3">故障报修</el-menu-item>
-                <el-menu-item index="2-4">公告管理</el-menu-item>
+              <el-menu-item index="2-3">故障报修</el-menu-item>
+              <el-menu-item index="2-4">公告管理</el-menu-item>
             </el-submenu>
             <el-submenu index="3">
               <template slot="title">
@@ -55,12 +114,10 @@
             </el-dropdown>
             <span>王小虎</span>
         </el-header>-->
-     <div class="box">
-       <router-view></router-view>
-     </div>
+        <div class="box">
+          <router-view></router-view>
+        </div>
       </el-container>
-    
-        
     </div>
   </div>
 </template>
@@ -73,7 +130,20 @@ export default {
       address: "上海市普陀区金沙江路 1518 弄"
     };
     return {
-      tableData: Array(20).fill(item)
+      tableData: Array(20).fill(item),
+      dialogTableVisible: false,
+      dialogFormVisible: false,
+      form: {
+        name: "",
+        region: "",
+        date1: "",
+        date2: "",
+        delivery: false,
+        type: [],
+        resource: "",
+        desc: ""
+      },
+      formLabelWidth: "120px"
     };
   }
 };
@@ -87,139 +157,60 @@ export default {
 .el-aside {
   color: #333;
 }
-.neirs {
-  height: 100px;
-  border: 1px solid #e6e6ff;
-  margin-left: 40px;
-}
-.neirsul {
-  margin-top: -40px;
-}
-.neirs ul li {
-  float: left;
-  list-style: none;
-  font-size: 48px;
-  margin: 70px;
-}
-.neirs ul li:nth-child(1) {
-  color: #1597db;
-}
-.neirs ul li:nth-child(2) {
-  color: #fcde9e;
-}
-.neirs ul li:nth-child(4) {
-  color: #f4ea2a;
-}
-.neirs ul li:nth-child(5) {
-  color: red;
-}
-.neirs ul li:nth-child(6) {
-  color: red;
-}
-.sp1 {
-  display: block;
-  font-size: 28px;
-  color: #623bfe;
-  margin: -46px 0px 0px 49px;
-}
-.p1 {
-  font-size: 12px;
-  color: #000;
-  margin: 0px 0px 0px 56px;
-}
-.p2 {
-  font-size: 12px;
-  color: #000;
-  margin: 0px 0px 0px 50px;
-}
-.neirz {
-  margin: -770px 0px 0px 240px;
-  width: 1507px;
-  height: 350px;
-  /* border: 1px solid #e6e6ff; */
-  color: #000;
- 
-}
-.neirz ul li{
-  list-style: none;
-  float: left;
-  /* margin: 10px; */
-}
-.neirz li:nth-child(2){
-  margin-left: 40px;
-}
-.neirz li:nth-child(3){
-  margin-left: 40px;
-}
-.neirz01{
-  /* float: left; */
-  width: 350px;
-  height: 340px;
-  border: 1px solid #e6e6ff;
-}
-.neirz02{
-  width: 650px;
-  height: 340px;
-  border: 1px solid #e6e6ff;
-}
-.neirz01 div{
-  width: 350px;
-  height: 40px;
-  border-bottom: 1px solid #e6e6ff;
-}
-.neirz02 div{
-  
-  width: 650px;
-  height: 40px;
-  border-bottom: 1px solid #e6e6ff;
-}
-.neirz03 div{
-  width: 350px;
-  height: 40px;
-  border-bottom: 1px solid #e6e6ff;
-}
-.neirz03{
-  
-  width: 350px;
-  height: 340px;
-  border: 1px solid #e6e6ff;
-}
-.sp02{
- display: block;
- padding: 10px 0px 0px 15px;
-  
-}
-.sp03{
-  float: right;
-   display: block;
-  margin: -20px 10px 0px 0px;
-}
-.neirx {
-  margin: -370px 0px 0px 240px;
-  width: 1507px;
-  height: 350px;
-  /* border: 1px solid #e6e6ff; */
-  color: #000;
-  margin-top: 50px;
- 
-}
-.neirx ul li{
-  list-style: none;
-  float: left;
-  /* margin: 10px; */
-}
-.neirx li:nth-child(2){
-  margin-left: 40px;
-}
-.neirx li:nth-child(3){
-  margin-left: 40px;
-}
+
+
 .el-icon-arrow-down:before {
-    content: "";
+  content: "";
 }
-.box{
+.box {
   width: 1550px;
   height: 900px;
-  border:1px solid #000;
+  border: 1px solid #000;
+}
+.head {
+  width: 100%;
+  height: 100px;
+  background-color: #957bfe;
+}
+.head img {
+  padding: 10px 0px 0px 20px;
+}
+.sp1 {
+  color: white;
+  margin: -60px 0px 0px 300px;
+  font-size: 24px;
+}
+.daohang {
+  margin: -60px 50px 0px 0px;
+  float: right;
+}
+.daohang ul li {
+  list-style: none;
+  color: white;
+  /* font-size: 18px; */
+  margin: 8px;
+}
+.daohang ul li:nth-child(1) {
+  font-size: 35px;
+}
+.daohang ul li:nth-child(2) {
+  font-size: 35px;
+}
+.daohang ul li:nth-child(3) {
+  font-size: 35px;
+}
+.daohang ul li:nth-child(4) {
+  font-size: 35px;
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+.el-icon-arrow-down {
+  font-size: 18px;
+}
+.sp2 {
+  font-size: 18px;
 }
 </style>

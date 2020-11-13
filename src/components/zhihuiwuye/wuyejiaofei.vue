@@ -313,7 +313,79 @@
               </div>
             </div>
           </el-tab-pane>
-          <el-tab-pane label="固话宽带" name="kuandai">2</el-tab-pane>
+          <el-tab-pane label="固话宽带" name="kuandai">
+            <div class="shuifei">
+              <div>
+                <template>
+                  <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+                    <el-tab-pane label="个人充值交费" name="first">
+                      <div class="grczjf">
+                        <el-divider content-position="left">填写充值信息</el-divider>
+                        <div class="juzhong">
+                          <el-form
+                            :label-position="labelPosition"
+                            label-width="80px"
+                            :model="formLabelAlign"
+                          >
+                            <el-form-item label="产品类型">
+                              <el-select v-model="value" placeholder="请选择">
+                                <el-option
+                                  v-for="item in options"
+                                  :key="item.value"
+                                  :label="item.label"
+                                  :value="item.value"
+                                ></el-option>
+                              </el-select>
+                            </el-form-item>
+                            <el-form-item label="所在城市">
+                              <i class="el-icon-location">长沙[切换城市]</i>
+                            </el-form-item>
+                            <el-form-item label="充值号码">
+                              <el-input v-model="formLabelAlign.type" class="iput02"></el-input>
+                            </el-form-item>
+                            <el-form-item label="确认号码">
+                              <el-input v-model="formLabelAlign.type" class="iput02"></el-input>
+                            </el-form-item>
+                          </el-form>
+                        </div>
+                      </div>
+                       <div class="grczjf">
+                        <el-divider content-position="left">选择支付方式</el-divider>
+                        <div class="juzhong">
+                          <el-form
+                            :label-position="labelPosition"
+                            label-width="80px"
+                            :model="formLabelAlign"
+                          >
+                            <el-form-item label="充值金额">
+                              <el-select v-model="value" placeholder="请选择">
+                                <el-option
+                                  v-for="item in options"
+                                  :key="item.value"
+                                  :label="item.label"
+                                  :value="item.value"
+                                ></el-option>
+                              </el-select>
+                            </el-form-item>
+                            <el-form-item label="验证码">
+                               <el-input v-model="formLabelAlign.type" class="iput02"></el-input>
+                            </el-form-item>
+                            <el-form-item label="支付方式">
+                              
+                            </el-form-item>
+                            <el-form-item label="确认号码">
+                              <el-input v-model="formLabelAlign.type" class="iput02"></el-input>
+                            </el-form-item>
+                          </el-form>
+                        </div>
+                      </div>
+                    </el-tab-pane>
+                    <el-tab-pane label="宽带包年续费" name="second">配置管理</el-tab-pane>
+                  </el-tabs>
+                </template>
+              </div>
+            </div>
+          </el-tab-pane>
           <el-tab-pane label="有线电视" name="yxds">
             <div class="shuifei">
               <div class="ranqifeis">
@@ -378,18 +450,21 @@
                   <el-input v-model="input" placeholder="111111" class="iput02"></el-input>
                 </p>需缴纳的物业费如下：
                 <div class="jiaonabiao">
-                  <el-table :data="tableData" style="width: 50%" border  header-cell-style="background-color: #C0C0FF;">
+                  <el-table
+                    :data="tableData"
+                    style="width: 50%"
+                    border
+                    header-cell-style="background-color: #C0C0FF;"
+                  >
                     <!-- <el-checkbox v-model="checked" ></el-checkbox> -->
 
-                    <el-table-column type="selection" width="55" ></el-table-column>
+                    <el-table-column type="selection" width="55"></el-table-column>
                     <el-table-column prop="name" label="时间" width="180"></el-table-column>
                     <el-table-column prop="address" label="费用"></el-table-column>
                   </el-table>
                 </div>
 
-                <div class="btnljjf2">
-                        立即缴费
-                </div>
+                <div class="btnljjf2">立即缴费</div>
               </div>
             </div>
           </el-tab-pane>
@@ -455,7 +530,13 @@ export default {
           name: "2019年6月",
           address: "￥100.00"
         }
-      ]
+      ],
+      labelPosition: "right",
+      formLabelAlign: {
+        name: "",
+        region: "",
+        type: ""
+      }
     };
   }
 };
@@ -662,8 +743,8 @@ export default {
   margin-top: 20px;
   margin-left: 200px;
 }
-.btnljjf2{
-   width: 340px;
+.btnljjf2 {
+  width: 340px;
   height: 40px;
   background-color: #bdbdff;
   color: white;
@@ -672,5 +753,16 @@ export default {
   border-radius: 8px;
   margin-left: 190px;
   margin-top: 14px;
+}
+.grczjf {
+  width: 800px;
+  height: 280px;
+  border-right: 1px solid #e4e4e4;
+  border-left: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin: 20px 0px 0px 25px;
+}
+.juzhong {
+  /* text-align: center; */
 }
 </style>
