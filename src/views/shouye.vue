@@ -65,10 +65,10 @@
     <div>
       <el-container style="height: 900px; border: 1px solid #eee">
         <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-          <el-menu :default-openeds="['1', '3']">
-            <el-submenu index="1">
+          <el-menu :default-openeds="['1', '3','2','4','5','6','7']">
+            <el-submenu index="1" @click="shouye" >
               <template slot="title">
-                <i class="el-icon-message"></i>首页
+                <i class="el-icon-message" ></i>首页
               </template>
             </el-submenu>
             <el-submenu index="2">
@@ -77,27 +77,60 @@
               </template>
               <el-menu-item-group>
                 <template slot="title"></template>
-                <el-menu-item index="2-1">物业缴费</el-menu-item>
-                <el-menu-item index="2-2">缴费查询</el-menu-item>
+                <el-menu-item index="2-1" @click="wuyejiaofei">物业缴费</el-menu-item>
+                <el-menu-item index="2-2" @click="jiaofeichaxun">缴费查询</el-menu-item>
               </el-menu-item-group>
-              <el-menu-item index="2-3">故障报修</el-menu-item>
-              <el-menu-item index="2-4">公告管理</el-menu-item>
+              <el-menu-item index="2-3" @click="guzhangbaoxiu">故障报修</el-menu-item>
+              <el-menu-item index="2-4" @click="gonggaoguanli">公告管理</el-menu-item>
             </el-submenu>
             <el-submenu index="3">
               <template slot="title">
                 <i class="el-icon-setting"></i>社区医疗
               </template>
               <el-menu-item-group>
-                <el-menu-item index="3-1">选项1</el-menu-item>
-                <el-menu-item index="3-2">选项2</el-menu-item>
+                <el-menu-item index="3-1" @click="yuyueguahao">预约挂号</el-menu-item>
+                <el-menu-item index="3-2" @click="jiankangxiaoties">健康小贴士</el-menu-item>
+                <el-menu-item index="3-3" @click="yishengjianjie">医生简介</el-menu-item>
               </el-menu-item-group>
-              <el-menu-item-group title="分组2">
-                <el-menu-item index="3-3">选项3</el-menu-item>
+            </el-submenu>
+             <el-submenu index="4">
+              <template slot="title">
+                <i class="el-icon-setting"></i>智能应用
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="4-1">智能停车</el-menu-item>
+                <el-menu-item index="4-2">智能开门</el-menu-item>
               </el-menu-item-group>
-              <el-submenu index="3-4">
-                <template slot="title">选项4</template>
-                <el-menu-item index="3-4-1">选项4-1</el-menu-item>
-              </el-submenu>
+            </el-submenu>
+               <el-submenu index="5">
+              <template slot="title">
+                <i class="el-icon-edit"></i>数据统计
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="5-1">房屋分类统计</el-menu-item>
+                <el-menu-item index="5-2">缴费分析统计</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+                <el-submenu index="6">
+              <template slot="title">
+                <i class="el-icon-postcard"></i>基本信息
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="6-1">房屋信息</el-menu-item>
+                <el-menu-item index="6-2">人口信息</el-menu-item>
+                <el-menu-item index="6-3">设备信息</el-menu-item>
+                <el-menu-item index="6-4">电子地图</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+                <el-submenu index="7">
+              <template slot="title">
+                <i class="el-icon-setting"></i>系统管理
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="7-1">用户管理</el-menu-item>
+                <el-menu-item index="7-2">角色管理</el-menu-item>
+                <el-menu-item index="7-3">权限管理</el-menu-item>
+              </el-menu-item-group>
             </el-submenu>
           </el-menu>
         </el-aside>
@@ -145,10 +178,37 @@ export default {
       },
       formLabelWidth: "120px"
     };
-  }
+  },
+  methods: {
+    shouye(){
+      this.$router.push({name:"shouyenr"})
+    },
+     wuyejiaofei(){
+      this.$router.push({name:"wuyejiaofei"})
+    },
+     jiaofeichaxun(){
+      this.$router.push({name:"jiaofeichaxun"})
+    }
+    ,
+     guzhangbaoxiu(){
+      this.$router.push({name:"guzhangbaoxiu"})
+    },
+     gonggaoguanli(){
+      this.$router.push({name:"gonggaoguanli"})
+    },
+     yuyueguahao(){
+      this.$router.push({name:"yuyueguahao"})
+    },
+     jiankangxiaoties(){
+      this.$router.push({name:"jiankangxiaoties"})
+    },
+     yishengjianjie(){
+      this.$router.push({name:"yishengjianjie"})
+    }
+  },
 };
 </script>
-<style>
+<style scoped>
 .el-header {
   background-color: #b3c0d1;
   color: #333;
@@ -163,9 +223,10 @@ export default {
   content: "";
 }
 .box {
-  width: 1550px;
+  width: 1680px;
   height: 900px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
+  /* margin: 0 auto; */
 }
 .head {
   width: 100%;

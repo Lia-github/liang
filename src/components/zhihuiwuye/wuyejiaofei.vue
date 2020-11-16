@@ -371,7 +371,10 @@
                                <el-input v-model="formLabelAlign.type" class="iput02"></el-input>
                             </el-form-item>
                             <el-form-item label="支付方式">
-                              
+                                <ul class="zful">
+                          <li><el-radio v-model="radio" label="1"><img src="../../../public/imgs/zfb.png" alt="" width="60px" height="30px"></el-radio></li>
+                          <li><el-radio v-model="radio" label="2"><img src="../../../public/imgs/wx.png" alt="" width="60px" height="30px"></el-radio></li>
+                        </ul>
                             </el-form-item>
                             <el-form-item label="确认号码">
                               <el-input v-model="formLabelAlign.type" class="iput02"></el-input>
@@ -380,7 +383,35 @@
                         </div>
                       </div>
                     </el-tab-pane>
-                    <el-tab-pane label="宽带包年续费" name="second">配置管理</el-tab-pane>
+                    <el-tab-pane label="宽带包年续费" name="second">
+                       <div class="grczjf2">
+                        <el-divider content-position="left">填写充值信息</el-divider>
+                        <div class="juzhong">
+                          <el-form
+                            :label-position="labelPosition"
+                            label-width="80px"
+                            :model="formLabelAlign"
+                          >
+                            <el-form-item label="宽带账号">
+                             <el-input v-model="formLabelAlign.type" class="iput02" placeholder="13512322262"></el-input>
+                            </el-form-item>
+                            <el-form-item label="确认账号">
+                              13512322262
+                            </el-form-item>
+                            <el-form-item label="宽带密码">
+                              <el-input v-model="formLabelAlign.type" class="iput02" placeholder="13512322262"></el-input>
+                            </el-form-item>
+                            <el-form-item label="验证码">
+                              <el-input v-model="formLabelAlign.type" class="iput02"></el-input>
+                              <!-- <img src="../../../public/imgs/yzm.png" class="imgyzm"> -->
+                            </el-form-item>
+                            
+                            <div class="btnljjf">立即缴费</div>
+                          </el-form>
+                        </div>
+                      </div>
+
+                    </el-tab-pane>
                   </el-tabs>
                 </template>
               </div>
@@ -498,6 +529,7 @@ export default {
   //   }
   data() {
     return {
+      
       options: [
         {
           value: "选项1",
@@ -536,12 +568,13 @@ export default {
         name: "",
         region: "",
         type: ""
-      }
+      },
+      radio: '1'
     };
   }
 };
 </script>
-<style>
+<style scoped>
 .biaoti {
   width: 100%;
   height: 40px;
@@ -756,13 +789,35 @@ export default {
 }
 .grczjf {
   width: 800px;
-  height: 280px;
+  height: 290px;
   border-right: 1px solid #e4e4e4;
   border-left: 1px solid #e4e4e4;
   border-bottom: 1px solid #e4e4e4;
   margin: 20px 0px 0px 25px;
 }
-.juzhong {
-  /* text-align: center; */
+.grczjf2 {
+  width: 800px;
+  height: 380px;
+  border-right: 1px solid #e4e4e4;
+  border-left: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin: 20px 0px 0px 25px;
 }
+.btnljjf{
+  width: 400px;
+  height: 50px;
+  background-color: #169BD5;
+  color: white;
+  text-align: center;
+  line-height: 48px;
+  margin: 0px 0px 0px 50px;
+}
+.imgyzm{
+  margin: 10px 0px 0px 20px;
+}
+.zful li{
+  float: left;
+  list-style: none;
+}
+
 </style>

@@ -87,7 +87,7 @@
 }
 .neirsul {
   margin-top: -40px;
-  margin-left: 140px;
+  margin-left: 0px;
 }
 .neirs ul li {
   float: left;
@@ -127,7 +127,7 @@
   margin: 0px 0px 0px 50px;
 }
 .neirz {
-  margin: 100px 0px 0px 240px;
+  margin: 50px 0px 0px 40px;
   width: 1507px;
   height: 350px;
   /* border: 1px solid #e6e6ff; */
@@ -189,7 +189,7 @@
   margin: -20px 10px 0px 0px;
 }
 .neirx {
-  margin: 0px 0px 200px 240px;
+  margin: 0px 0px 200px 40px;
   width: 1507px;
   height: 350px;
   /* border: 1px solid #e6e6ff; */

@@ -297,12 +297,7 @@ export default {
   font-size: 18px;
   padding: 22px 0px 0px 50px;
 }
-.qiehuan {
-  /* background-color: #baa8fe; */
-}
-/* .el-tabs--border-card>.el-tabs__header .el-tabs__item {
-    background-color: #baa8fe;
-} */
+
 .el-tabs__item.is-active {
   color: white;
   background-color: #957bfe;
