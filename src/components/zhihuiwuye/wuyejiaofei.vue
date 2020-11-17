@@ -819,5 +819,4 @@ export default {
   float: left;
   list-style: none;
 }
-
 </style>

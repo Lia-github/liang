@@ -107,8 +107,8 @@
                 <i class="el-icon-edit"></i>数据统计
               </template>
               <el-menu-item-group>
-                <el-menu-item index="5-1">房屋分类统计</el-menu-item>
-                <el-menu-item index="5-2">缴费分析统计</el-menu-item>
+                <el-menu-item index="5-1" @click="fangwufenlei">房屋分类统计</el-menu-item>
+                <el-menu-item index="5-2" @click="jiaofeifenxi">缴费分析统计</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
                 <el-submenu index="6">
@@ -116,9 +116,9 @@
                 <i class="el-icon-postcard"></i>基本信息
               </template>
               <el-menu-item-group>
-                <el-menu-item index="6-1">房屋信息</el-menu-item>
-                <el-menu-item index="6-2">人口信息</el-menu-item>
-                <el-menu-item index="6-3">设备信息</el-menu-item>
+                <el-menu-item index="6-1" @click="fangwuxingxi">房屋信息</el-menu-item>
+                <el-menu-item index="6-2" @click="renkouxinxi">人口信息</el-menu-item>
+                <el-menu-item index="6-3" @click="shebeixinxi">设备信息</el-menu-item>
                 <el-menu-item index="6-4">电子地图</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
@@ -127,8 +127,8 @@
                 <i class="el-icon-setting"></i>系统管理
               </template>
               <el-menu-item-group>
-                <el-menu-item index="7-1">用户管理</el-menu-item>
-                <el-menu-item index="7-2">角色管理</el-menu-item>
+                <el-menu-item index="7-1" @click="yonghuguanlil">用户管理</el-menu-item>
+                <el-menu-item index="7-2" @click="juseguanli">角色管理</el-menu-item>
                 <el-menu-item index="7-3">权限管理</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
@@ -204,6 +204,32 @@ export default {
     },
      yishengjianjie(){
       this.$router.push({name:"yishengjianjie"})
+    },
+     fangwuxingxi(){
+      this.$router.push({name:"fangwuxingxi"})
+    },
+     renkouxinxi(){
+      this.$router.push({name:"renkouxinxi"})
+    }
+    ,
+     shebeixinxi(){
+      this.$router.push({name:"shebeixinxi"})
+    }
+    ,
+     yonghuguanlil(){
+      this.$router.push({name:"yonghuguanlil"})
+    }
+    ,
+     juseguanli(){
+      this.$router.push({name:"juseguanli"})
+    }
+    ,
+     fangwufenlei(){
+      this.$router.push({name:"fangwufenlei"})
+    }
+    ,
+     jiaofeifenxi(){
+      this.$router.push({name:"jiaofeifenxi"})
     }
   },
 };

@@ -101,12 +101,42 @@ export default new Router({
           name: "yishengxiangqing",
           component: () =>import( "./components/shequyiliao/yishengxiangqing.vue")
         }
+        ,
+        {
+          path: "/fangwuxingxi",
+          name: "fangwuxingxi",
+          component: () =>import( "./components/jibenxingxi/fangwuxingxi.vue")
+        }
+        ,
+        {
+          path: "/renkouxinxi",
+          name: "renkouxinxi",
+          component: () =>import( "./components/jibenxingxi/renkouxinxi.vue")
+        }
+        ,
+        {
+          path: "/shebeixinxi",
+          name: "shebeixinxi",
+          component: () =>import( "./components/jibenxingxi/shebeixinxi.vue")
+        }
+        ,
+        {
+          path: "/yonghuguanlil",
+          name: "yonghuguanlil",
+          component: () =>import( "./components/xitongguanli/yonghuguanlil.vue")
+        }
+        ,
+        {
+          path: "/juseguanli",
+          name: "juseguanli",
+          component: () =>import( "./components/xitongguanli/juseguanli.vue")
+        }
       ]
     },
     {
       path: "/",
-      name: "Head",
-      component: () =>import( "./components/Head.vue")
+      name: "shouye",
+      component: () =>import( "./views/shouye.vue")
     }
     
   ]

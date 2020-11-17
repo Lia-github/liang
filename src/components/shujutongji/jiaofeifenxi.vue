@@ -28,14 +28,15 @@
                     <span class="sp1">100</span>
                     <p class="p1">停车费</p>
                 </li>
-                <li class="kuang01">
+                <!-- <li class="kuang01">
                     <span class="el-icon-s-home"></span>
                     <span class="sp1">100</span>
                     <p class="p1">物业费</p>
-                </li>
+                </li> -->
             </ul>
             <div class="shoufeifenxi">
-                <div class="shoufeifenxis">|收费分析
+                <div class="shoufeifenxis">
+                    <span class="sffx">|收费分析</span>
                     <ul class="shoufeifenxisUL">
                         <li>银行转账（%）：</li>
                         <li class="li01">50</li>
@@ -69,7 +70,7 @@
   border: 1px solid #e6e6ff;
 }
 .kuang ul{
-    margin-left: 70px;
+    margin-left: 0px;
 }
 .kuang ul li{
     list-style: none;
@@ -107,7 +108,7 @@
     width: 1500px;
     height: 400px;
     border: 1px solid #CECEFE;
-    margin: 170px 0px 0px 200px;
+    margin: 170px 0px 0px 20px;
 }
 .shoufeifenxis{
      width: 1500px;
@@ -125,5 +126,8 @@
 }
 .shoufeifenxisUL{
     margin: -115px 0px 0px 100px;
+}
+.sffx{
+    /* float: left; */
 }
 </style>
