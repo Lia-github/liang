@@ -131,6 +131,42 @@ export default new Router({
           name: "juseguanli",
           component: () =>import( "./components/xitongguanli/juseguanli.vue")
         }
+        ,
+        {
+          path: "/dianziditu",
+          name: "dianziditu",
+          component: () =>import( "./components/jibenxingxi/dianziditu.vue")
+        }
+        ,
+        {
+          path: "/zhinengtingche",
+          name: "zhinengtingche",
+          component: () =>import( "./components/zhinengyingyong/zhinengtingche.vue")
+        }
+        ,
+        {
+          path: "/cheweiluru",
+          name: "cheweiluru",
+          component: () =>import( "./components/zhinengyingyong/cheweiluru.vue")
+        }
+         ,
+        {
+          path: "/cheliangguanli",
+          name: "cheliangguanli",
+          component: () =>import( "./components/zhinengyingyong/cheliangguanli.vue")
+        }
+          ,
+        {
+          path: "/tingchejilu",
+          name: "tingchejilu",
+          component: () =>import( "./components/zhinengyingyong/tingchejilu.vue")
+        }
+        ,
+        {
+          path: "/zhinengkaimen",
+          name: "zhinengkaimen",
+          component: () =>import( "./components/zhinengyingyong/zhinengkaimen.vue")
+        }
       ]
     },
     {

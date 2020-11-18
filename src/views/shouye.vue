@@ -66,7 +66,7 @@
       <el-container style="height: 900px; border: 1px solid #eee">
         <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
           <el-menu :default-openeds="['1', '3','2','4','5','6','7']">
-            <el-submenu index="1" @click="shouye" >
+            <el-submenu index="1" @click="shouye">
               <template slot="title">
                 <i class="el-icon-message" ></i>首页
               </template>
@@ -98,8 +98,11 @@
                 <i class="el-icon-setting"></i>智能应用
               </template>
               <el-menu-item-group>
-                <el-menu-item index="4-1">智能停车</el-menu-item>
-                <el-menu-item index="4-2">智能开门</el-menu-item>
+                <el-menu-item index="4-1" @click="zhinengtingche">智能停车</el-menu-item>
+                <el-menu-item index="4-2" @click="zhinengkaimen">智能开门</el-menu-item>
+                <el-menu-item index="4-3" @click="cheweiluru">车位录入</el-menu-item>
+                <el-menu-item index="4-4" @click="cheliangguanli">车辆管理</el-menu-item>
+                <el-menu-item index="4-5" @click="tingchejilu">停车记录</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
                <el-submenu index="5">
@@ -119,7 +122,7 @@
                 <el-menu-item index="6-1" @click="fangwuxingxi">房屋信息</el-menu-item>
                 <el-menu-item index="6-2" @click="renkouxinxi">人口信息</el-menu-item>
                 <el-menu-item index="6-3" @click="shebeixinxi">设备信息</el-menu-item>
-                <el-menu-item index="6-4">电子地图</el-menu-item>
+                <el-menu-item index="6-4" @click="dianziditu">电子地图</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
                 <el-submenu index="7">
@@ -230,6 +233,30 @@ export default {
     ,
      jiaofeifenxi(){
       this.$router.push({name:"jiaofeifenxi"})
+    }
+     ,
+     dianziditu(){
+      this.$router.push({name:"dianziditu"})
+    }
+    ,
+     zhinengtingche(){
+      this.$router.push({name:"zhinengtingche"})
+    }
+     ,
+     cheweiluru(){
+      this.$router.push({name:"cheweiluru"})
+    }
+     ,
+     cheliangguanli(){
+      this.$router.push({name:"cheliangguanli"})
+    }
+      ,
+     tingchejilu(){
+      this.$router.push({name:"tingchejilu"})
+    }
+      ,
+     zhinengkaimen(){
+      this.$router.push({name:"zhinengkaimen"})
     }
   },
 };
