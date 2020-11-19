@@ -17,7 +17,7 @@ export default new Router({
       children:[
         {
           path: "/shouye",
-          redirect:"/shouyenr"
+          redirect:"./components/shouyenr.vue"
         },
         {
           path: "/wuyejiaofei",
@@ -166,6 +166,12 @@ export default new Router({
           path: "/zhinengkaimen",
           name: "zhinengkaimen",
           component: () =>import( "./components/zhinengyingyong/zhinengkaimen.vue")
+        }
+        ,
+        {
+          path: "/quanxianguanli",
+          name: "quanxianguanli",
+          component: () =>import( "./components/xitongguanli/quanxianguanli.vue")
         }
       ]
     },

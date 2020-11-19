@@ -367,7 +367,7 @@ export default {
   padding-top: 60px;
 }
 .fenye {
-  margin-top: 320px;
+  margin-top: 220px;
   width: 100%;
   height: 80px;
   border-top: 1px solid #e6e6ff;

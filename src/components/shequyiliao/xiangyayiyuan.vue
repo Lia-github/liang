@@ -2,7 +2,7 @@
   <div>
     <div class="biaoti"></div>
     <div class="kuang">
-      <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+      <el-button type="primary" icon="el-icon-arrow-left"><router-link to="kuaisuyuyue" tag="i">上一页</router-link></el-button>
       <div class="div1">
         <span class="sp1">湘雅第一医院</span>
         <p>

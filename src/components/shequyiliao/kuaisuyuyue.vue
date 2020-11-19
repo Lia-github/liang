@@ -4,7 +4,7 @@
     <div class="kuang">
       <div class="kuangdin">
       <div class="fanhui">
-          <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+          <el-button type="primary" icon="el-icon-arrow-left"><router-link  to="yuyueguahao" tag="i">上一页</router-link></el-button>
           <span class="sp1">当前位置：长沙市岳麓区茶子山路佑姆塘社区</span><l class="el-icon-location-outline"></l>
           <span class="sp3"><el-link type="primary" :underline="false">
             <router-link to="qitayiyuan">选择其他医院</router-link>

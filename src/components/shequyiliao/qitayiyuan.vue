@@ -4,7 +4,7 @@
     <div class="kuang">
       <div class="div1">
         <div class="fh">
-          <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+          <el-button type="primary" icon="el-icon-arrow-left"><router-link to="kuaisuyuyue" tag="i">上一页</router-link></el-button>
         </div>
 
         <ul class="ul1">
@@ -72,7 +72,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .biaoti {
   width: 100%;
   height: 40px;

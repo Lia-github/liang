@@ -17,7 +17,7 @@
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 .biaoti {
   width: 100%;
   height: 40px;

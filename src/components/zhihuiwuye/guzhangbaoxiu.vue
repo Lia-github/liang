@@ -134,6 +134,7 @@
 export default {
   data() {
     return {
+        activeName: 'first',
       value1: "",
       value2: "",
       options: [
@@ -264,7 +265,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .biaoti {
   width: 100%;
   height: 40px;

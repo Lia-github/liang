@@ -157,7 +157,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .biaoti {
   width: 100%;
   height: 40px;

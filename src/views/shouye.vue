@@ -132,7 +132,7 @@
               <el-menu-item-group>
                 <el-menu-item index="7-1" @click="yonghuguanlil">用户管理</el-menu-item>
                 <el-menu-item index="7-2" @click="juseguanli">角色管理</el-menu-item>
-                <el-menu-item index="7-3">权限管理</el-menu-item>
+                <el-menu-item index="7-3" @click="quanxianguanli">权限管理</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
           </el-menu>
@@ -250,13 +250,17 @@ export default {
      cheliangguanli(){
       this.$router.push({name:"cheliangguanli"})
     }
-      ,
+     ,
      tingchejilu(){
       this.$router.push({name:"tingchejilu"})
     }
-      ,
+    ,
      zhinengkaimen(){
       this.$router.push({name:"zhinengkaimen"})
+    }
+    ,
+     quanxianguanli(){
+      this.$router.push({name:"quanxianguanli"})
     }
   },
 };

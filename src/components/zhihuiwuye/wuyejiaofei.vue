@@ -5,7 +5,7 @@
       <div class="sp1">缴费类型</div>
       <div class="qiehuanleibiao">
         <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-          <el-tab-pane label="水费" name="first">
+          <el-tab-pane label="水费" name="first1">
             <div class="shuifei">
               <div class="chakan">查看历史账单</div>
               <div class="shuifeikuang">
@@ -317,8 +317,8 @@
             <div class="shuifei">
               <div>
                 <template>
-                  <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-                    <el-tab-pane label="个人充值交费" name="first">
+                  <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
+                    <el-tab-pane label="个人充值交费" name="first2">
                       <div class="grczjf">
                         <el-divider content-position="left">填写充值信息</el-divider>
                         <div class="juzhong">
@@ -406,7 +406,7 @@
                               <!-- <img src="../../../public/imgs/yzm.png" class="imgyzm"> -->
                             </el-form-item>
                             
-                            <div class="btnljjf">立即缴费</div>
+                            <div class="btnljjf4">立即缴费</div>
                           </el-form>
                         </div>
                       </div>
@@ -454,7 +454,7 @@
                   地 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 址：
                   <el-input v-model="input" placeholder="xx市xx区xx街道xx社区xx栋xx室" class="iput02"></el-input>
                 </p>
-                <div class="btnljjf">立即缴费</div>
+                <div class="btnljjf3">立即缴费</div>
               </div>
             </div>
           </el-tab-pane>
@@ -529,7 +529,8 @@ export default {
   //   }
   data() {
     return {
-      
+      activeName:'first1',
+       activeName2:'first2',
       options: [
         {
           value: "选项1",
@@ -708,11 +709,11 @@ export default {
 }
 .tingchefei {
   width: 850px;
-  height: 800px;
+  height: 760px;
   border: 1px solid #e6e6ff;
 }
 .fenye2 {
-  margin-top: 340px;
+  margin-top: 310px;
   width: 850px;
   height: 80px;
   border-top: 1px solid #e6e6ff;
@@ -767,6 +768,16 @@ export default {
   border-radius: 8px;
   margin-left: 314px;
 }
+.btnljjf4 {
+  width: 340px;
+  height: 40px;
+  background-color: #bdbdff;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 44px;
+}
 /* .biaogebj{
   background: #C0C0FF;
   text-align: center;
@@ -803,14 +814,14 @@ export default {
   border-bottom: 1px solid #e4e4e4;
   margin: 20px 0px 0px 25px;
 }
-.btnljjf{
+.btnljjf3{
   width: 400px;
   height: 50px;
   background-color: #169BD5;
   color: white;
   text-align: center;
   line-height: 48px;
-  margin: 0px 0px 0px 50px;
+  margin: 0px 0px 0px 250px;
 }
 .imgyzm{
   margin: 10px 0px 0px 20px;
